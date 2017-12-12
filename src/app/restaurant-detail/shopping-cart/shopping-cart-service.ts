@@ -12,7 +12,7 @@ export class ShoppingCartService {
     addItem(item: MenuItem) {
         let foundItem = this.items.find((mItem) => mItem.menuItem.id === item.id);
         if (foundItem) {
-            foundItem.quantity += foundItem.quantity;
+            foundItem.quantity++;
         }else {
             this.items.push(new CartItem(item));
         }
