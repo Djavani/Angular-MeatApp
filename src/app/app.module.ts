@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { RestaurantsService } from './restaurants/restaurants.service';
+import { OrderService } from './order/order.service';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 
@@ -50,8 +51,9 @@ import { OrderItemsComponent } from './order/order-items/order-items.component';
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-      RestaurantsService, 
-      ShoppingCartService, 
+      RestaurantsService,
+      ShoppingCartService,
+      OrderService,
       {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
